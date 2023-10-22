@@ -12,6 +12,10 @@
         <color rgba="1 0.3 0.1 1"/>
     </material>
 
+    <material name="red">
+        <color rgba="1 0 0 1"/>
+    </material>
+
     <material name="blue">
         <color rgba="0.2 0.2 1 1"/>
     </material>
@@ -54,6 +58,10 @@
         </xacro:inertial_box>
     </link>
 
+    <gazebo reference="chassis">
+        <material>Gazebo/White</material>
+    </gazebo>
+
     <!-- Front Left Wheel-->
     <joint name="front_left_wheel_joint" type="continuous">
         <parent link="base_link"/>
@@ -79,6 +87,10 @@
             <origin xyz="0 0 0" rpy="0 0 0"/>
         </xacro:inertial_cylinder>
     </link>
+
+    <gazebo reference="front_left_wheel">
+        <material>Gazebo/Blue</material>
+    </gazebo>
 
     <!-- Back Left Wheel -->
     <joint name="back_left_wheel_joint" type="continuous">
@@ -106,6 +118,10 @@
         </xacro:inertial_cylinder>
     </link>
 
+    <gazebo reference="back_left_wheel">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+
     <!-- Back Right Wheel-->
     <joint name="back_right_wheel_joint" type="continuous">
         <parent link="base_link"/>
@@ -131,6 +147,10 @@
             <origin xyz="0 0 0" rpy="0 0 0"/>
         </xacro:inertial_cylinder>
     </link>
+
+    <gazebo reference="back_right_wheel">
+        <material>Gazebo/Blue</material>
+    </gazebo>
 
     <!-- Front Right Wheel-->
     <joint name="front_right_wheel_joint" type="continuous">
@@ -158,6 +178,9 @@
         </xacro:inertial_cylinder>
     </link>
 
+    <gazebo reference="front_right_wheel">
+        <material>Gazebo/Blue</material>
+    </gazebo>
 
 
 
